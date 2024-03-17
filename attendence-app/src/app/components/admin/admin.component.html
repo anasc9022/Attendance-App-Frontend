@@ -1,0 +1,26 @@
+<div class="container mt-3">
+    <div class="row justify-content-center">
+        <div class="col-md-8"> <!-- Adjust the column width as needed -->
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead class="table-dark" style="text-align: center;">
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">User</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Mobile Number</th>
+                        </tr>
+                    </thead>
+                    <tbody style="text-align: center;">
+                        <tr *ngFor="let tempUser of users">
+                            <th routerLink="/report/{{ tempUser.id }}" scope="row">{{ tempUser.id }}</th>
+                            <td routerLink="/report/{{ tempUser.id }}">{{ tempUser.userName }}</td>
+                            <td routerLink="/report/{{ tempUser.id }}">{{ tempUser.email }}</td>
+                            <td routerLink="/report/{{ tempUser.id }}">{{ tempUser.phone }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="container mt-3">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h4>{{ reports.length > 0 ? 'Attendance Report For: ' + reports[0].userName : 'No reports available' }}</h4>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-2">
+        <div class="col-md-8">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead class="table-dark" style="text-align: center;">
+                        <tr>
+                            <th scope="col">Serial No.</th>
+                            <th scope="col">SignIn Date</th>
+                            <th scope="col">SignIn</th>
+                            <th scope="col">SignOut</th>
+                        </tr>
+                    </thead>
+                    <tbody style="text-align: center;">
+                        <tr *ngFor="let tempReport of reports; let i = index">
+                            <td>{{ i + 1 }}</td>
+                            <td>{{ tempReport.loginDate }}</td>
+                            <td>{{ tempReport.signInTime }}</td>
+                            <td>{{ tempReport.singOutTime }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

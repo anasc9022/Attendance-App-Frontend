@@ -1,0 +1,31 @@
+
+<div class="container" style="display: flex; justify-content: center; align-items: center; height: 75vh">
+
+<div class="mt-4">
+    <h3>Sign In</h3>
+    <form style="width: 300px;" (ngSubmit)="onSubmit()">
+        <div class="mb-3 mt-3">
+            <label for="exampleInputEmail1" class="form-label">User Name</label>
+            <input type="userName" class="form-control" name="userName" id="exampleInputEmail1"
+            [(ngModel)]="userName">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" id="exampleInputPassword1"
+            [(ngModel)]="password">
+        </div>
+        <div class="mb-3 mt-3">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input type="userName" class="form-control" name="email" id="exampleInputEmail1"
+            [(ngModel)]="email">
+        </div>
+        <div class="mb-3 mt-3">
+            <label for="exampleInputEmail1" class="form-label">Phone</label>
+            <input type="userName" class="form-control" name="phone" id="exampleInputEmail1"
+            [(ngModel)]="phone">
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+        <button class="btn btn-primary ms-4" routerLink="/login">Login</button>
+    </form>
+</div>
+</div>

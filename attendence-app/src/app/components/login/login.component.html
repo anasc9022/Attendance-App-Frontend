@@ -1,0 +1,37 @@
+<div class="container" style="display: flex; justify-content: center; align-items: center; height: 75vh">
+    <div class="mt-4" *ngIf="loggedIn">
+        <h3>Sign In</h3>
+        <form style="width: 300px;" (ngSubmit)="onSubmit()">
+            <div class="mb-3 mt-3">
+                <label for="exampleInputEmail1" class="form-label">SignIn Date :</label>
+                <input type="userName" readonly class="form-control" name="userName" id="exampleInputEmail1"
+                    value="{{ loginDate }}">
+            </div>
+            <div class="mb-3">
+                <label for="examplesSgnInTime" class="form-label">SignIn Time :</label>
+                <input type="text" readonly class="form-control" name="password" id="exampleSignInTime"
+                    value="{{ signInTime }}">
+            </div>
+            <button (click)="logout()" class="btn btn-primary">Logout</button>
+            <button routerLink="/report/{{ registerId }}" class="btn btn-primary ms-4">View Report</button>
+        </form>
+    </div>
+
+    <div class="mt-4" *ngIf="!loggedIn">
+        <h3>Sign In</h3>
+        <form style="width: 300px;" (ngSubmit)="onSubmit()">
+            <div class="mb-3 mt-3">
+                <label for="exampleInputEmail1" class="form-label">User Name</label>
+                <input type="userName" class="form-control" name="userName" id="exampleInputEmail1"
+                    [(ngModel)]="userName">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" name="password" id="exampleInputPassword1"
+                    [(ngModel)]="password">
+            </div>
+            <button type="submit" class="btn btn-primary">Sign In</button>
+            <button routerLink="/register" class="btn btn-primary ms-4">Register</button>
+        </form>
+    </div>
+</div>
